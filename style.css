@@ -1,0 +1,110 @@
+body, div, h1, h2, h3, ul, li, nav, p {
+	margin:0;
+	padding:0;
+	border:0;
+	vertical-align: baseline;
+	font-family: sans-serif;
+	color: #424242;
+}
+
+.group:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body{
+	background: #FFC273;
+}
+
+.sidebar{
+	width: 280px;
+	background: #24577B;
+	position: fixed;
+	float: left;
+	height: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.sidebar h1{
+	text-align: center;
+	padding-top: 40px;
+	color: white;
+}
+
+.content{
+	margin-left:360px;
+	float: left;
+	padding: 40px;
+}
+
+.content h2{
+	padding-bottom: 20px;
+}
+
+.content p{
+	padding-bottom: 20px;
+}
+
+.content ul{
+	padding-left: 40px;
+}
+
+.my-picture{
+	padding-top: 40px;
+	margin: auto;
+	width: 280px;
+	text-align: center;
+}
+
+.my-picture img{
+	width: 40%;
+	height: 40%;
+}
+
+.my-links{
+	padding-top: 20px;
+	width: 190px;
+	margin: auto;
+}
+
+.my-links ul{
+	margin: auto;
+}
+
+.my-links li {
+	float: left;
+	list-style: none;
+	padding-right: 10px;
+}
+
+.my-links a{
+	text-decoration: none;
+	color: white;
+}
+
+.hidden{
+	display:none;
+}
+
+nav{
+	width: 190px;
+	margin: auto;
+}
+
+nav ul li{
+	list-style:none;
+	text-align: center;
+	width: 100px;
+	border: 1px solid black;
+	margin: auto;
+	margin-top: 10px;
+	background: #FFC273;
+}
+
+nav ul li a{
+	display:block;
+	text-decoration: none;
+	color: #24577B;
+}

@@ -4,44 +4,78 @@
 	<title>
 		Felix Thea
 	</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div class="container">
-		<header>
-			<nav>
-				<ul>
-					<li>Home</li>
-					<li>Resume</li>
-					<li>Projects</li>
-				</ul>
-			</nav>
+		<div class="sidebar">
 			<h1>
 				Felix Thea
 			</h1>
-		</header>
+			<div class="my-picture">
+				<img src="images/me.jpg" alt="Me">
+			</div>
+			<div class="my-links">
+				<ul class="group">
+					<li><a href="http://linkedin.com/in/felixthea">LinkedIn</a></li>
+					<li><a href="http://twitter.com/felixthea">Twitter</a></li>
+					<li><a href="http://github.com/felixthea">Github</a></li>
+				</ul>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#" data-id="about">About</a></li>
+					<li><a href="#" data-id="resume">Resume</a></li>
+					<li><a href="#" data-id="projects">Projects</a></li>
+				</ul>
+			</nav>
+		</div>
 		<div class="content">
-			<div class="summary">
+			<div class="about">
 				<h2>About Me</h2>
-				I'm Felix.  I am a web developer with experience as a product manager at an adtech startup.  I like building web apps that solve business problems like education/training and automating manual processes.
+				<p>
+					I'm Felix.  I am a web developer with experience as a product manager at an adtech startup.  I like building web apps that solve business problems.  So far I've been focused on building solutions for education/training and automating manual business processes.
+				</p>
+				<p>
+					I have experience building web apps using the following technologies:
+				</p>
 				<ul>
 					<li>Ruby on Rails</li>
 					<li>JavaScript, Backbone and jQuery</li>
 					<li>HTML/CSS</li>
 					<li>SQL</li>
 				</ul>
-				You can contact me at <a href="mailto:felixthea@gmail.com">felixthea@gmail.com</a>
-				<br>
-				Follow my web development learning process here: <a href="http://tumblr.com/felixiscoding">Felix is Coding</a>
-				<br>
-				<a href="http://twitter.com/felixthea">Twitter</a>
+				<p>
+					<br>
+					You can contact me at <a href="mailto:felixthea@gmail.com">felixthea@gmail.com</a>.
+				</p>
 			</div>
-			<div class="projects">
+			<div class="resume hidden">
+				<h2>Resume</h2>
+				Resume placeholder
+			</div>
+			<div class="projects hidden">
 				<h2>Projects</h2>
 				<ul>
-					<li>Rampup Ready - An urban dictionary for companies to build a company and industry specific dictionary and curriculums to educate employees. (<a href="http://www.rampupready.com">demo</a> | <a href="https://github.com/felixthea/rampup-ready">github</a>)</li>
+					<li><a href="http://rampupready.com">Rampup Ready</a> - An urban dictionary for companies to build a company and industry specific dictionary and curriculums to educate employees. (<a href="http://www.rampupready.com">demo</a> | <a href="https://github.com/felixthea/rampup-ready">github</a>)</li>
 				</ul>
 			</div>
 		</div>
-	</container>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('nav').on('click', 'a', function(event){
+			event.preventDefault();
+			var link = $(event.currentTarget).attr("data-id")
+			$('.content').find('div').each(function(index, el){
+				if (!$(el).hasClass('hidden')){
+					$(el).addClass('hidden')
+				}
+			})
+			$('.'+link).toggleClass('hidden')
+		})
+	})
+	</script>
 </body>
 </html>
