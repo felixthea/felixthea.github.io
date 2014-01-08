@@ -5,6 +5,15 @@ body, div, h1, h2, h3, ul, li, nav, p {
 	vertical-align: baseline;
 	font-family: sans-serif;
 	color: #424242;
+	font-size: 16px;
+}
+
+h1{
+	font-size: 50px;
+}
+
+h2{
+	font-size: 24px;
 }
 
 .group:after{
@@ -40,6 +49,7 @@ body{
 }
 
 .content h2{
+	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
@@ -107,4 +117,27 @@ nav ul li a{
 	display:block;
 	text-decoration: none;
 	color: #24577B;
+}
+
+/*article{
+	width: 800px;
+}*/
+
+.job-title{
+	float:left;
+	padding-right: 200px;
+}
+
+.dates{
+	float:right;
+}
+
+.description{
+	padding-top: 20px;
+}
+
+article{
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #24577B;
 }

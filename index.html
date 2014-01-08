@@ -34,14 +34,14 @@
 			<div class="about">
 				<h2>About Me</h2>
 				<p>
-					I'm Felix.  I am a web developer with experience as a product manager at an adtech startup.  I like building web apps that solve business problems.  So far I've been focused on building solutions for education/training and automating manual business processes.
+					I'm Felix.  I am a NYC-based web developer with experience as a product manager at an adtech startup.  I like building web apps that solve business problems.  Currently I'm focusing on building solutions for education and training.
 				</p>
 				<p>
 					I have experience building web apps using the following technologies:
 				</p>
 				<ul>
 					<li>Ruby on Rails</li>
-					<li>JavaScript, Backbone and jQuery</li>
+					<li>JavaScript, Backbone.js and jQuery</li>
 					<li>HTML/CSS</li>
 					<li>SQL</li>
 				</ul>
@@ -52,7 +52,39 @@
 			</div>
 			<div class="resume hidden">
 				<h2>Resume</h2>
-				Resume placeholder
+				<article>
+					<div class="job-header group">
+						<div class="job-title">
+							Product Manager @ MediaMath
+						</div>
+						<div class="dates">
+							Dec. 2011 to Oct. 2013
+						</div>
+					</div>
+					<div class="description">
+						I was a product manager for MediaMath's TerminalOne platform and the product owner for TerminalOne's Ad Server, Rich Media, Private Marketplace and real-time-bidding ad supply integrations.  I owned the entire product development process for each product which includes discovery, design, story writing, product marketing, on-going support and post-release feedback for further product iteration.  I also maintained and prioritized the backlog and roadmap for my products.
+						<br><br>
+						<strong>Key accomplishments</strong>:
+						<ul>
+							<li>Interviewed users and third-party vendors to discover, design, market and train users for TerminalOne's Ad Server and Rich Media product - achieved goal of 20% user penetration and powered $1.6MM of revenue in 6 months following release</li>
+							<li>Collaborated with six strategic partners to design an industry-wide protocol for TerminalOne's Private Marketplace V1 product - 29% user penetration and powered $3.5MM of revenue in previous 6 months</li>
+							<li>Created a training program and documentation for the Ad Server and Rich Media products, which included five company-wide training sessions, three external client webinars and worked with TerminalOne trainers to incorporate the new products into our bi-monthly education series</li>
+						</ul>
+					</div>
+				</article>
+				<article>
+					<div class="job-header group">
+						<div class="job-title">
+							Manager, Business Development and Partner Operations @ MediaMath
+						</div>
+						<div class="dates">
+							Nov. 2009 to Nov. 2011
+						</div>
+					</div>
+					<div class="description">
+						Prioritized, evaluated and managed nearly every integrated partner and managed three of our largest and most strategic partnerships.
+					</div>
+				</article>
 			</div>
 			<div class="projects hidden">
 				<h2>Projects</h2>
@@ -68,7 +100,7 @@
 		$('nav').on('click', 'a', function(event){
 			event.preventDefault();
 			var link = $(event.currentTarget).attr("data-id")
-			$('.content').find('div').each(function(index, el){
+			$('.content').children('div').each(function(index, el){
 				if (!$(el).hasClass('hidden')){
 					$(el).addClass('hidden')
 				}
