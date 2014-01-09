@@ -13,7 +13,7 @@
 				Felix Thea
 			</h1>
 			<div class="my-picture">
-				<img src="images/me.jpg" alt="Me">
+				<img src="images/felix-thea-cropped-2.jpg" alt="Felix Thea">
 			</div>
 			<div class="my-links">
 				<ul class="group">
@@ -34,7 +34,7 @@
 			<div class="about">
 				<h2>About Me</h2>
 				<p>
-					I'm Felix.  I am a NYC-based web developer with experience as a product manager at an adtech startup.  I like building web apps that solve business problems.  Currently I'm focusing on building solutions for education and training.
+					I am a NYC-based web developer with experience as a product manager at an adtech startup.  I like building web apps that solve business problems.  Currently I'm focusing on building solutions for education and training.
 				</p>
 				<p>
 					I have experience building web apps using the following technologies:
@@ -50,23 +50,23 @@
 					You can contact me at <a href="mailto:felixthea@gmail.com">felixthea@gmail.com</a>.
 				</p>
 			</div>
-			<div class="resume hidden">
+			<div class="resume">
 				<h2>Resume</h2>
 				<h3>Job Experience</h3>
 				<article>
 					<div class="job-header group">
 						<div class="job-title">
-							Product Manager @ MediaMath
+							<strong>Product Manager @ MediaMath</strong>
 						</div>
 						<div class="dates">
-							Dec. 2011 to Oct. 2013
+							<strong>Dec. 2011 to Oct. 2013</strong>
 						</div>
 					</div>
 					<div class="description">
-						I was a product manager for MediaMath's TerminalOne platform and the product owner for TerminalOne's Ad Server, Rich Media, Private Marketplace and real-time-bidding ad supply integrations.  I owned the entire product development process for each product which includes discovery, design, story writing, product marketing, on-going support and post-release feedback for further product iteration.  I also maintained and prioritized the backlog and roadmap for my products.
-						<br><br>
-						<strong>Key accomplishments</strong>:
 						<ul>
+							<li>Product owner for TerminalOne's Ad Server, Rich Media, Private Marketplace and real-time bidding ad supply integrations.</li>
+							<li>Performed discovery, design, story writing, product marketing, on-going support and post-release feedback</li>
+							<li>Prioritized backlog and roadmap</li>
 							<li>Interviewed users and third-party vendors to discover, design, market and train users for TerminalOne's Ad Server and Rich Media product - achieved goal of 20% user penetration and powered $1.6MM of revenue in 6 months following release</li>
 							<li>Collaborated with six strategic partners to design an industry-wide protocol for TerminalOne's Private Marketplace V1 product - 29% user penetration and powered $3.5MM of revenue in previous 6 months</li>
 							<li>Created a training program and documentation for the Ad Server and Rich Media products, which included five company-wide training sessions, three external client webinars and worked with TerminalOne trainers to incorporate the new products into our bi-monthly education series</li>
@@ -76,14 +76,18 @@
 				<article>
 					<div class="job-header group">
 						<div class="job-title">
-							Manager, Business Development and Partner Operations @ MediaMath
+							<strong>Manager, Business Development and Partner Operations @ MediaMath</strong>
 						</div>
 						<div class="dates">
-							Nov. 2009 to Nov. 2011
+							<strong>Nov. 2009 to Nov. 2011</strong>
 						</div>
 					</div>
 					<div class="description">
-						Prioritized, evaluated and managed nearly every integrated partner and managed three of our largest and most strategic partnerships.
+						<ul>
+							<li>Prioritized, evaluated and managed nearly every integrated partner and managed three of our largest and most strategic partnerships.</li>
+							<li>Educated internal teams on partnerships through documentation in the company knowledge base.</li>
+							<li>Created standard operating procedure documentation for partner operations.</li>
+						</ul>
 					</div>
 				</article>
 				<br>
@@ -91,10 +95,10 @@
 				<article>
 					<div class="job-header group">
 						<div class="job-title">
-							Bachelor of Science Business Administration @ Boston University
+							<strong>Bachelor of Science Business Administration @ Boston University</strong>
 						</div>
 						<div class="dates">
-							Graduated 2009
+							<strong>Graduated 2009</strong>
 						</div>
 					</div>
 					<div class="description">
@@ -104,7 +108,7 @@
 					</div>
 				</article>
 			</div>
-			<div class="projects hidden">
+			<div class="projects">
 				<h2>Projects</h2>
 				<ul>
 					<li>
@@ -126,12 +130,9 @@
 		$('nav').on('click', 'a', function(event){
 			event.preventDefault();
 			var link = $(event.currentTarget).attr("data-id")
-			$('.content').children('div').each(function(index, el){
-				if (!$(el).hasClass('hidden')){
-					$(el).addClass('hidden')
-				}
-			})
-			$('.'+link).toggleClass('hidden')
+			$('html, body').animate({
+				scrollTop: $("."+link).offset().top
+			}, 1000);
 		})
 	})
 	</script>
