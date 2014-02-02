@@ -29,6 +29,7 @@
 					<li><a href="#" data-id="about">About</a></li>
 					<li><a href="#" data-id="resume">Resume</a></li>
 					<li><a href="#" data-id="projects">Projects</a></li>
+					<li><a href="http://blog.felixthea.com" data-id="blog">Blog</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -145,11 +146,13 @@
 	<script>
 	$(document).ready(function(){
 		$('nav').on('click', 'a', function(event){
-			event.preventDefault();
 			var link = $(event.currentTarget).attr("data-id")
-			$('html, body').animate({
-				scrollTop: $("."+link).offset().top
-			}, 1000);
+			if (link !== "blog"){
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop: $("."+link).offset().top
+				}, 1000);
+			}
 		})
 	})
 	</script>
